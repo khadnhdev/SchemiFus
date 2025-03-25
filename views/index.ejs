@@ -1,0 +1,272 @@
+<div class="game-container">
+  <!-- Game Header -->
+  <div class="game-header">
+    <div class="level-indicator">
+      <span class="level-label">Level</span>
+      <span class="level-value">1</span>
+    </div>
+    <div class="game-logo">
+      <h1>Chemistry <span>Fusion</span></h1>
+    </div>
+    <div class="score-display">
+      <span class="score-label">Score</span>
+      <span class="score-value">0</span>
+    </div>
+    <a href="/notebook" class="notebook-link">
+      <i class="fas fa-book"></i> Sổ Tay
+    </a>
+  </div>
+
+  <!-- Main Game Area -->
+  <div class="game-area">
+    <!-- Elements Selection Zone -->
+    <div class="game-panel elements-panel">
+      <div class="panel-header">
+        <h2><i class="fas fa-atom"></i> Nguyên tố</h2>
+      </div>
+      <div class="search-box" style="padding: 10px;">
+        <input type="text" id="elementSearch" placeholder="Tìm kiếm...">
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="panel-content">
+        <div class="elements-grid" id="elementsContainer">
+          <!-- Elements will be dynamically inserted here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Lab Zone -->
+    <div class="game-panel lab-panel">
+      <div class="panel-header">
+        <h2><i class="fas fa-flask"></i> Phòng thí nghiệm</h2>
+      </div>
+      <div class="panel-content">
+        <!-- Selected Elements Display -->
+        <div class="lab-section">
+          <h3>Nguyên tố đã chọn</h3>
+          <div class="selected-elements-container" id="selectedElements">
+            <div class="placeholder-text">Chưa có nguyên tố</div>
+          </div>
+        </div>
+        
+        <!-- Reaction Conditions -->
+        <div class="lab-section">
+          <h3>Điều kiện phản ứng</h3>
+          
+          <!-- Nhiệt độ -->
+          <div class="condition-group">
+            <div class="condition-label">
+              <i class="fas fa-temperature-high"></i>
+              <span>Nhiệt độ</span>
+            </div>
+            <div class="condition-options">
+              <input type="radio" name="temperature" id="temp-cold" value="Lạnh" class="condition-input">
+              <label for="temp-cold" class="condition-btn">
+                <span class="condition-icon"><i class="fas fa-snowflake"></i></span>
+                <span class="condition-name">Lạnh</span>
+              </label>
+              
+              <input type="radio" name="temperature" id="temp-normal" value="Bình thường" class="condition-input" checked>
+              <label for="temp-normal" class="condition-btn">
+                <span class="condition-icon"><i class="fas fa-thermometer-half"></i></span>
+                <span class="condition-name">Bình thường</span>
+              </label>
+              
+              <input type="radio" name="temperature" id="temp-warm" value="Ấm" class="condition-input">
+              <label for="temp-warm" class="condition-btn">
+                <span class="condition-icon"><i class="fas fa-fire"></i></span>
+                <span class="condition-name">Ấm</span>
+              </label>
+              
+              <input type="radio" name="temperature" id="temp-hot" value="Nóng chảy" class="condition-input">
+              <label for="temp-hot" class="condition-btn">
+                <span class="condition-icon"><i class="fas fa-meteor"></i></span>
+                <span class="condition-name">Nóng chảy</span>
+              </label>
+            </div>
+          </div>
+          
+          <!-- Áp suất -->
+          <div class="condition-group">
+            <div class="condition-label">
+              <i class="fas fa-compress-alt"></i>
+              <span>Áp suất</span>
+            </div>
+            <div class="condition-options">
+              <input type="radio" name="pressure" id="pressure-normal" value="Bình thường" class="condition-input" checked>
+              <label for="pressure-normal" class="condition-btn">
+                <span class="condition-icon"><i class="fas fa-equals"></i></span>
+                <span class="condition-name">Bình thường</span>
+              </label>
+              
+              <input type="radio" name="pressure" id="pressure-high" value="Cao" class="condition-input">
+              <label for="pressure-high" class="condition-btn">
+                <span class="condition-icon"><i class="fas fa-arrow-up"></i></span>
+                <span class="condition-name">Cao</span>
+              </label>
+              
+              <input type="radio" name="pressure" id="pressure-veryhigh" value="Cực cao" class="condition-input">
+              <label for="pressure-veryhigh" class="condition-btn">
+                <span class="condition-icon"><i class="fas fa-angle-double-up"></i></span>
+                <span class="condition-name">Cực cao</span>
+              </label>
+            </div>
+          </div>
+          
+          <!-- Chất xúc tác -->
+          <div class="condition-group">
+            <div class="condition-label">
+              <i class="fas fa-vial"></i>
+              <span>Chất xúc tác</span>
+            </div>
+            <div class="condition-options">
+              <input type="radio" name="catalyst" id="catalyst-none" value="" class="condition-input" checked>
+              <label for="catalyst-none" class="condition-btn">
+                <span class="condition-icon"><i class="fas fa-times"></i></span>
+                <span class="condition-name">Không có</span>
+              </label>
+              
+              <input type="radio" name="catalyst" id="catalyst-pt" value="Pt" class="condition-input">
+              <label for="catalyst-pt" class="condition-btn">
+                <span class="condition-icon catalyst-icon">Pt</span>
+                <span class="condition-name">Bạch kim</span>
+              </label>
+              
+              <input type="radio" name="catalyst" id="catalyst-mno2" value="MnO₂" class="condition-input">
+              <label for="catalyst-mno2" class="condition-btn">
+                <span class="condition-icon catalyst-icon">MnO₂</span>
+                <span class="condition-name">Mangan Đioxit</span>
+              </label>
+              
+              <input type="radio" name="catalyst" id="catalyst-fe" value="Fe" class="condition-input">
+              <label for="catalyst-fe" class="condition-btn">
+                <span class="condition-icon catalyst-icon">Fe</span>
+                <span class="condition-name">Sắt</span>
+              </label>
+              
+              <input type="radio" name="catalyst" id="catalyst-v2o5" value="V2O5" class="condition-input">
+              <label for="catalyst-v2o5" class="condition-btn">
+                <span class="condition-icon catalyst-icon">V₂O₅</span>
+                <span class="condition-name">Vanadium Pentoxide</span>
+              </label>
+              
+              <input type="radio" name="catalyst" id="catalyst-ni" value="Ni" class="condition-input">
+              <label for="catalyst-ni" class="condition-btn">
+                <span class="condition-icon catalyst-icon">Ni</span>
+                <span class="condition-name">Nickel</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Animation Lab -->
+        <div class="lab-animation-container" id="labAnimation">
+          <div class="lab-beaker">
+            <div class="beaker-liquid"></div>
+            <div class="beaker-bubbles">
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+            </div>
+          </div>
+          <div class="lab-tubes">
+            <div class="tube tube-left"></div>
+            <div class="tube tube-right"></div>
+          </div>
+        </div>
+        
+        <!-- Process Button -->
+        <div class="process-container">
+          <button id="processButton" class="process-button">
+            <span class="process-icon"><i class="fas fa-magic"></i></span>
+            <span class="process-text">Tiến hành Phản ứng</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Zone -->
+    <div class="game-panel results-panel d-none" id="result">
+      <div class="panel-header">
+        <h2><i class="fas fa-lightbulb"></i> Kết quả Phản ứng</h2>
+        <div class="result-actions">
+          <button id="saveButton" class="save-button">
+            <i class="fas fa-save"></i> Lưu
+          </button>
+          <a href="/notebook" class="notebook-button">
+            <i class="fas fa-book"></i> Sổ Tay
+          </a>
+        </div>
+      </div>
+      <div class="panel-content">
+        <div class="result-status" id="reactionAlert">
+          <!-- Status will be inserted here -->
+        </div>
+        
+        <div class="result-section">
+          <div class="section-label">
+            <i class="fas fa-equals"></i>
+            <span>Phương trình</span>
+          </div>
+          <div class="section-content formula-display" id="reactionEquation"></div>
+        </div>
+        
+        <div class="result-section">
+          <div class="section-label">
+            <i class="fas fa-info-circle"></i>
+            <span>Giải thích</span>
+          </div>
+          <div class="section-content" id="explanation"></div>
+        </div>
+        
+        <div class="result-section fun-fact">
+          <div class="section-label">
+            <i class="fas fa-star"></i>
+            <span>Thông tin thú vị</span>
+          </div>
+          <div class="section-content" id="funFact"></div>
+        </div>
+        
+        <div class="result-section">
+          <div class="section-label">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span>Mức độ nguy hiểm</span>
+          </div>
+          <div class="danger-meter">
+            <div class="danger-track">
+              <div id="dangerBar" class="danger-level"></div>
+            </div>
+            <div class="danger-labels">
+              <span>An toàn</span>
+              <span>Nguy hiểm</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="result-section">
+          <div class="section-label">
+            <i class="fas fa-sticky-note"></i>
+            <span>Ghi chú</span>
+          </div>
+          <textarea id="userNote" class="game-textarea" placeholder="Thêm ghi chú..."></textarea>
+        </div>
+        
+        <div class="rewards-container">
+          <div class="xp-reward">
+            <i class="fas fa-star"></i>
+            <span class="xp-value">+25 XP</span>
+          </div>
+          <div class="achievement-reward">
+            <i class="fas fa-trophy"></i>
+            <span>Nhà Hóa Học Tò Mò</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/storage.js"></script>
+<script>
+  window.elements = <%- JSON.stringify(elements) %>;
+</script> 

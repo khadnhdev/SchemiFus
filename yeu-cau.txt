@@ -1,0 +1,61 @@
+Dưới đây là danh sách chi tiết về các tính năng của trò chơi "Chemistry Fusion" mà bạn có thể phát triển:
+
+📌 Danh Sách Tính Năng & Mô Tả
+1️⃣ Chọn và Kết Hợp Nguyên Tố
+✅ Người chơi có thể chọn từ 1-3 nguyên tố từ bảng tuần hoàn.
+✅ Hỗ trợ tìm kiếm nguyên tố theo tên hoặc ký hiệu (vd: H, O, Na...).
+✅ Hiển thị thông tin cơ bản của từng nguyên tố (tính chất, nhóm hóa học).
+
+2️⃣ Chọn Điều Kiện Phản Ứng
+✅ Các điều kiện có thể điều chỉnh gồm:
+
+Nhiệt độ: Lạnh ❄, Ấm 🔥, Nóng chảy 🌋.
+
+Áp suất: Bình thường, Cao, Cực cao.
+
+Chất xúc tác: Chọn các chất xúc tác phổ biến như Pt, MnO₂, v.v.
+
+✅ Điều kiện sẽ ảnh hưởng đến kết quả phản ứng, giúp tạo ra nhiều kết quả đa dạng hơn.
+
+3️⃣ AI Tính Toán & Giải Thích Kết Quả
+✅ Nếu phản ứng có thật: Hiển thị phương trình hóa học chính xác.
+✅ Nếu phản ứng không có thật: AI sẽ tạo ra kết quả hài hước hoặc giả tưởng.
+✅ Hiển thị giải thích chi tiết về phản ứng (tại sao xảy ra hoặc không xảy ra).
+
+💡 Ví dụ:
+
+Chọn Na + H₂O → "BÙM! Bạn vừa tạo ra phản ứng cực mạnh, cẩn thận nhé!" 💥
+
+Chọn He + O₂ → "Không có phản ứng, nhưng nếu hít vào, bạn sẽ nói giọng vịt Donald!" 🦆
+
+4️⃣ Lưu Công Thức Vào "Sổ Tay Hóa Học"
+✅ Lưu lại phản ứng đã thực hiện, bao gồm:
+
+Các nguyên tố đã chọn.
+
+Điều kiện phản ứng.
+
+Kết quả và giải thích AI.
+
+Ghi chú cá nhân của người chơi.
+✅ Dễ dàng truy cập lại công thức để thử nghiệm với điều kiện khác.
+
+5️⃣ Chia Sẻ & Tương Tác Xã Hội
+✅ Chia sẻ công thức hoặc kết quả phản ứng với bạn bè qua mạng xã hội.
+✅ Xem công thức nổi bật của những người chơi khác (các phản ứng kỳ quặc, hài hước).
+✅ Hệ thống bình chọn phản ứng vui nhất/thú vị nhất.
+
+6️⃣ Hệ Thống Thành Tích & Nâng Cấp
+🏆 Danh hiệu đặc biệt:
+
+"Nhà giả kim tài ba" – Lưu thành công 10 công thức chuẩn.
+
+"Nhà khoa học điên" – Lưu 5 phản ứng hài hước.
+
+"Bậc thầy phản ứng cháy nổ" – Thử nghiệm ít nhất 3 phản ứng gây nổ.
+
+🔓 Mở khóa tính năng mới khi đạt đủ thành tích, ví dụ:
+
+Chế độ thử nghiệm nâng cao: Thêm nhiều điều kiện ảnh hưởng đến phản ứng.
+
+Chế độ giả tưởng: Kết hợp nguyên tố theo phong cách phép thuật hoặc khoa học viễn tưởng.

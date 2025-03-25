@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-md-8 offset-md-2">
+    <div class="card shadow-sm">
+      <div class="card-header bg-primary text-white">
+        <h1 class="h4 mb-0">📔 Sổ Tay Hóa Học</h1>
+      </div>
+      <div class="card-body">
+        <div class="mb-3">
+          <input type="text" id="notebookSearch" class="form-control" placeholder="Tìm kiếm phản ứng...">
+        </div>
+        
+        <div id="emptyNotebook" class="text-center py-5">
+          <div class="display-1 text-muted">📝</div>
+          <h3>Sổ tay trống</h3>
+          <p>Bạn chưa lưu phản ứng nào. Hãy quay lại trang chủ để thực hiện và lưu phản ứng.</p>
+          <a href="/" class="btn btn-primary">Quay lại Trang chủ</a>
+        </div>
+        
+        <div id="notebookEntries" class="d-none">
+          <!-- Sẽ được tạo động bởi JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/storage.js"></script> 

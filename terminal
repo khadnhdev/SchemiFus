@@ -1,0 +1,4 @@
+mkdir chemistry-fusion
+cd chemistry-fusion
+npm init -y
+npm install express express-ejs-layouts ejs dotenv @google/generative-ai axios 
